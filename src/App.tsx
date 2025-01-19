@@ -1,33 +1,21 @@
-// import Message from './components/Message';
+import { useState } from "react";
 
-// function App(){
-//   return (
-//     <div>
-//       <Message/>
-//       <Message/>
-//       <Message/>
-      
-//     </div>
-//   )
-// }
+function App() {
+    const [drink, setDrink] = useState({
+        title : " americano"
+        price: 5,
+    })
+    const handleClick = () => {
+        setDrink({ ...drink,price:6}); 
+        };
+       
 
-// export default App;
-
-
-//  ---------------------------------------------------------
-//  video 38
-
-
-import Message from './components/Message';
-
-function App(){
-  return (
-    <div>
-      <Message/>
-      
-      
-    </div>
-  )
+    };
+    return (
+        <div>
+        <button onClick={ handleClick} > Click me</button>
+        </div>
+    );
 }
 
 export default App;
